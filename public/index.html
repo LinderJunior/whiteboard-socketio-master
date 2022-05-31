@@ -16,7 +16,7 @@
         border-radius: 5px;
       }
       body{
-        background: rgb(55,55,55) !important;
+        background: rgb(50, 54, 53) !important;
       }
       #imageView { border: 1px solid #000; }
       #imageTemp { position: absolute; top: 1px; left: 1px; }
@@ -62,9 +62,10 @@ label{
 	<body style="margin-top:30px;">
 	<div class="container">
     <div class="alert alert-info" style="padding: 10px !important; margin-bottom: 5px; width:88%">
-      <strong>Socket IO &#10084;</strong>  - This is a Multi-Users Drawing board, Open <a class="linkToBoard" style="cursor:pointer; color: #ff002d;" target="_blank">link</a> in another tab or Open in another computer try drawing simultaneously in both. <strong>Cool, isn't ?</strong>
+       <strong> O Whiteboard permite que vários usuários desenhem ao mesmo tempo. Abrir link https://linderwhiteboard.herokuapp.com/  em duas abas ou mais separadas em seu navegador ou Abrir link em outro computador e desenhar simultaneamente em ambos. </strong>
     </div>
-        <p style="">
+        <p>
+     
         <button type="button" class="btn btn-warning btn-sm" value="pencil" id="pencil-button">Pencil</button>
         <button type="button" class="btn btn-warning btn-sm" value="rect" id="rect-button">Rectangle</button>
         <button type="button" class="btn btn-warning btn-sm" value="circle" id="circle-button">Circle</button>
@@ -72,18 +73,16 @@ label{
         <button type="button" class="btn btn-warning btn-sm" value="line" id="line-button">Line</button>
         <button type="button" class="btn btn-warning btn-sm" value="text" id="text-button">Text</button>
         <button type="button" class="btn btn-warning btn-sm" id="clear-all">Clear All</button>
-        <label for="colour" style="position:absolute;">Colour : </label>
+        <button class="button" data-sharer="whatsapp" data-title="Checkout Sharer.js!" data-url="https://linderwhiteboard.herokuapp.com/">Share on Whatsapp</button>
+        <button class="button" data-sharer="email" data-title="Awesome Url" data-url="https://linderwhiteboard.herokuapp.com/" data-subject="Hey! Check out that URL" data-to="">Share via Email</button>
+        <button class="button" data-sharer="linkedin" data-url="https://linderwhiteboard.herokuapp.com/">Share on Linkedin</button>
+
+
+        <label for="colour" style="position:absolute;">Cor : </label> <p></p>
+ 
         <input id="colour-picker" value="#000000" style="width:80px;" class="jscolor {width:243, height:150, position:'right',
     borderColor:'#FFF', insetColor:'#FFF', backgroundColor:'#666'}">
-        <!-- <span class="form-group" style="width: 100px;display: inline-block;">
-              <label for="draw-grid">Grid: </label>
-              <select class="form-control" id="draw-grid">
-                <option value="normal">Normal</option>
-                <option value="medium" selected>Medium</option>
-                <option value="large">Large</option>
-                <option value="nogrid">No Grid</option>
-              </select>
-        </span> -->
+
         <span class="form-group" style="width: 90px;display: inline-block;">
           <label for="line-Width">Thickness: </label>
           <select class="form-control" id="line-Width">
@@ -146,7 +145,13 @@ label{
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="jscolor/jscolor.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
-		 <script src="canvas.js"></script> 
+		    <script src="canvas.js"></script>
+        <script src="path/to/sharer.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+
+
+
+
 		<!-- <script src="canvas-backup-latest-v1.js"></script> -->
 
      <script type="text/javascript">

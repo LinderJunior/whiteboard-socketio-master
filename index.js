@@ -7,8 +7,16 @@ const port = process.env.PORT || 3001;
 
 app.use(express.static(__dirname + '/public'));
 
-//heroku features:enable http-session-affinity
-//to work with socket io
+
+//NOVO
+var line_history = [];
+
+for(let i in line_history){
+  socket.emit('drawing', line_history[i]);
+
+
+}
+
 
 function onConnection(socket){
   socket.on('drawing', function(data){

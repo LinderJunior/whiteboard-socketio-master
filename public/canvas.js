@@ -239,9 +239,7 @@ window.addEventListener('load', function () {
   }
   
   
-  // This function draws the #imageTemp canvas on top of #imageView, after which 
-  // #imageTemp is cleared. This function is called each time when the user 
-  // completes a drawing operation.
+
   function img_update(trans) {
 		contexto.drawImage(canvas, 0, 0);
 		context.clearRect(0, 0, canvas.width, canvas.height);
@@ -306,8 +304,7 @@ window.addEventListener('load', function () {
     textarea.style.display = "none";
     textarea.style.value = "";
 
-    // This is called when you start holding down the mouse button.
-    // This starts the pencil drawing.
+
     this.mousedown = function (ev) {
         //context.beginPath();
         //context.moveTo(ev._x, ev._y);
@@ -316,9 +313,6 @@ window.addEventListener('load', function () {
         tool.y0 = ev._y;
     };
 
-    // This function is called every time you move the mouse. Obviously, it only 
-    // draws if the tool.started state is set to true (when you are holding down 
-    // the mouse button).
     this.mousemove = function (ev) {
       if (tool.started) {
         drawPencil(tool.x0, tool.y0, ev._x, ev._y, colorPicked, lineWidthPicked, true);
@@ -891,27 +885,11 @@ tools.text = function () {
                     tmp_txt_ctn.innerHTML = '';
                 }
                 
-                /*var ta_comp_style = getComputedStyle(textarea);
-                var fs = ta_comp_style.getPropertyValue('font-size');
-                var ff = ta_comp_style.getPropertyValue('font-family');*/
+        
                 var fs = SelectedFontSize + "px";
                 var ff = SelectedFontFamily;
 
-                /*context.font = fs + ' ' + ff;
-                context.textBaseline = 'top';
-                context.fillStyle = "#"+colorPicked;
-                 
-                for (var n = 0; n < processed_lines.length; n++) {
-                    var processed_line = processed_lines[n];
-                     
-                    context.fillText(
-                        processed_line,
-                        parseInt(textarea.style.left),
-                        parseInt(textarea.style.top) + n*parseInt(fs)
-                    );
-                }
-                
-                img_update(); */
+                /* */
                 
                 DrawText(fs, ff, colorPicked, textarea.style.left, textarea.style.top, processed_lines, true)
                 console.log("lines saved")
