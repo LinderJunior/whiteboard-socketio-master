@@ -905,6 +905,16 @@ tools.text = function () {
     };
     
   };
+
+//SALVAR NO LOCAL
+   
+
+
+
+
+
+
+
   
   //Text tool end
   
