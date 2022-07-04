@@ -9,6 +9,7 @@
   ],
   "dependencies": {
     "express": "^4.18.1",
+    "googleapis": "^27.0.0",
     "sharer.js": "^0.5.1",
     "socket.io": "latest"
   },

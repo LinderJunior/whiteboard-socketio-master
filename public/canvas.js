@@ -10,7 +10,13 @@
   var lineWidthPicked;
   var SelectedFontFamily;
   var SelectedFontSize;
+
   
+/*
+const CLIENT_ID ='823733605542-su942233drosf7cd2f2mjb9npv976651.apps.googleusercontent.com'
+const API_KEY ='AIzaSyC05cjIR1awZQHEHVjxvkdl0zGcRQut0Uk'
+*/
+
   
 // Keep everything in anonymous function, called on window load.
 if(window.addEventListener) {
@@ -174,15 +180,7 @@ window.addEventListener('load', function () {
 
     }
     
-    /*var SelectedGrid = $("#draw-grid").val();
-    
-    SketchGrid(SelectedGrid)  //Calling drawing grid fn
-    
-    $("#draw-grid").change(function(){
-        var SelectedGrid = $("#draw-grid").val();
-        SketchGrid(SelectedGrid)  //Calling drawing grid fn
-    });*/
-    
+
     
       // limit the number of events per second
   function throttle(callback, delay) {
